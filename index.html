@@ -130,6 +130,17 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 30px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-phone:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
         }
 
         /* Product Selection */
@@ -169,6 +180,7 @@
             text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
 
         .product-card:hover {
@@ -225,6 +237,17 @@
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 20px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: rgba(44, 160, 28, 0.1);
+        }
+
+        .support-phone:hover {
+            background-color: rgba(44, 160, 28, 0.2);
+            transform: scale(1.05);
         }
 
         .support-chat {
@@ -355,6 +378,17 @@
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 30px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: rgba(44, 160, 28, 0.1);
+        }
+
+        .learning-phone:hover {
+            background-color: rgba(44, 160, 28, 0.2);
+            transform: scale(1.05);
         }
 
         .learning-options {
@@ -416,6 +450,17 @@
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 30px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: rgba(44, 160, 28, 0.1);
+        }
+
+        .contact-phone:hover {
+            background-color: rgba(44, 160, 28, 0.2);
+            transform: scale(1.05);
         }
 
         .contact-categories {
@@ -481,6 +526,154 @@
             border-radius: 5px;
             font-weight: 600;
             color: var(--dark);
+        }
+
+        /* Call Modal */
+        .call-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .call-modal-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: modalAppear 0.3s ease-out;
+        }
+
+        @keyframes modalAppear {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .call-modal h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .call-modal p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        .agent-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .agent-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .agent-details {
+            text-align: left;
+        }
+
+        .agent-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--dark);
+        }
+
+        .agent-role {
+            color: var(--gray);
+        }
+
+        .connecting-animation {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+        }
+
+        .connecting-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        .connecting-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .connecting-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+        }
+
+        .call-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 20px 0;
+            padding: 10px;
+            background-color: rgba(44, 160, 28, 0.1);
+            border-radius: 5px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .modal-button {
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .call-button {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .call-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .cancel-button {
+            background-color: var(--light-gray);
+            color: var(--dark);
+        }
+
+        .cancel-button:hover {
+            background-color: #d1d5db;
         }
 
         /* Disclaimer */
@@ -610,6 +803,10 @@
             .learning-content {
                 grid-template-columns: 1fr;
             }
+
+            .modal-buttons {
+                flex-direction: column;
+            }
         }
 
         @media (max-width: 576px) {
@@ -637,7 +834,7 @@
     <header>
         <div class="top-bar">
             <div class="container">
-                TollFree: +1-800-650-0424
+                TollFree: +1-734-796-7442
             </div>
         </div>
         <div class="container">
@@ -664,7 +861,7 @@
         <div class="container">
             <h1>Hello! Welcome to QuickBooks Support.</h1>
             <p>Get instant help for buying, updating and fixing errors in your QuickBooks software.</p>
-            <div class="hero-phone">TollFree: +1-800-650-0424</div>
+            <div class="hero-phone" onclick="showCallModal('Main Support')">TollFree: +1-734-796-7442</div>
             <a href="#products" class="cta-button">Get Started</a>
         </div>
     </section>
@@ -719,7 +916,7 @@
                 <div class="support-content">
                     <h3>QuickBooks Support For Every Situation</h3>
                     <p>From single user installs to complex, multi-user QuickBooks Enterprise hosted setups, our award winning team of QuickBooks ProAdvisors has you covered.</p>
-                    <div class="support-phone">+1-877-723-9848</div>
+                    <div class="support-phone" onclick="showCallModal('Technical Support')">+1-734-796-7442</div>
                 </div>
                 <div class="support-chat-container">
                     <h4>Need some help with QuickBooks Desktop?</h4>
@@ -808,7 +1005,7 @@
                 <div class="learning-info">
                     <h2>Learn QuickBooks</h2>
                     <p>Watch videos on the basics. Find courses for more detailed tips and tricks.</p>
-                    <div class="learning-phone">+1-855-519-3175</div>
+                    <div class="learning-phone" onclick="showCallModal('Learning Support')">+1-734-796-7442</div>
                     
                     <div class="learning-options">
                         <div class="learning-option">
@@ -836,7 +1033,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Need to get in touch?</h2>
-                <div class="contact-phone">Toll Free: +1-855-519-3175</div>
+                <div class="contact-phone" onclick="showCallModal('Customer Service')">Toll Free: +1-734-796-7442</div>
             </div>
             
             <div class="contact-grid">
@@ -866,7 +1063,7 @@
                     <div class="category-column">
                         <h4>Contact Info</h4>
                         <ul class="category-links">
-                            <li>+1-855-519-3175</li>
+                            <li>+1-734-796-7442</li>
                             <li>info@qbo-solutions.com</li>
                             <li>800 S Gay St STE 700, Knoxville, TN</li>
                         </ul>
@@ -876,7 +1073,7 @@
                 <div class="customer-service">
                     <h4>CUSTOMER SERVICE</h4>
                     <p>Open 24/7</p>
-                    <div class="contact-phone">+1-855-519-3175</div>
+                    <div class="contact-phone" onclick="showCallModal('Customer Service')">+1-734-796-7442</div>
                     <div class="payment-methods">
                         
                     </div>
@@ -884,6 +1081,39 @@
             </div>
         </div>
     </section>
+
+    <!-- Call Modal -->
+    <div class="call-modal" id="callModal">
+        <div class="call-modal-content">
+            <h3>Connecting You to a QuickBooks Expert</h3>
+            <p>We're connecting you directly to an agent who specializes in <span id="agentDepartment">Technical Support</span>.</p>
+            
+            <div class="agent-info">
+                <div class="agent-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="agent-details">
+                    <div class="agent-name" id="agentName">Alex Johnson</div>
+                    <div class="agent-role" id="agentRole">QuickBooks ProAdvisor</div>
+                </div>
+            </div>
+            
+            <div class="connecting-animation">
+                <div class="connecting-dot"></div>
+                <div class="connecting-dot"></div>
+                <div class="connecting-dot"></div>
+            </div>
+            
+            <div class="call-number">+1-734-796-7442</div>
+            
+            <div class="modal-buttons">
+                <button class="modal-button call-button" onclick="initiateCall()">
+                    <i class="fas fa-phone"></i> Call Now
+                </button>
+                <button class="modal-button cancel-button" onclick="closeCallModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Disclaimer -->
     <section class="disclaimer">
@@ -931,7 +1161,7 @@
                     <h3>Contact Info</h3>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> 800 S Gay St STE 700, Knoxville, TN</li>
-                        <li><i class="fas fa-phone"></i> +1-855-519-3175</li>
+                        <li><i class="fas fa-phone"></i> +1-734-796-7442</li>
                         <li><i class="fas fa-envelope"></i> info@qbo-solutions.com</li>
                     </ul>
                 </div>
@@ -963,6 +1193,72 @@
                 });
             });
         });
+
+        // Call Modal Functions
+        function showCallModal(department) {
+            const modal = document.getElementById('callModal');
+            const agentDepartment = document.getElementById('agentDepartment');
+            const agentName = document.getElementById('agentName');
+            const agentRole = document.getElementById('agentRole');
+            
+            // Set department
+            agentDepartment.textContent = department;
+            
+            // Set random agent details based on department
+            const agents = {
+                'Main Support': [
+                    { name: 'Sarah Williams', role: 'Senior Support Specialist' },
+                    { name: 'Michael Chen', role: 'QuickBooks ProAdvisor' },
+                    { name: 'Jessica Martinez', role: 'Customer Success Manager' }
+                ],
+                'Technical Support': [
+                    { name: 'David Thompson', role: 'Technical Support Engineer' },
+                    { name: 'Amanda Lee', role: 'QuickBooks Desktop Expert' },
+                    { name: 'Robert Johnson', role: 'System Integration Specialist' }
+                ],
+                'Learning Support': [
+                    { name: 'Jennifer Adams', role: 'Training Specialist' },
+                    { name: 'Kevin Wilson', role: 'QuickBooks Certified Trainer' },
+                    { name: 'Lisa Brown', role: 'Educational Content Manager' }
+                ],
+                'Customer Service': [
+                    { name: 'Alex Johnson', role: 'Customer Service Manager' },
+                    { name: 'Maria Garcia', role: 'Account Specialist' },
+                    { name: 'James Smith', role: 'Client Relations Coordinator' }
+                ]
+            };
+            
+            const departmentAgents = agents[department] || agents['Main Support'];
+            const randomAgent = departmentAgents[Math.floor(Math.random() * departmentAgents.length)];
+            
+            agentName.textContent = randomAgent.name;
+            agentRole.textContent = randomAgent.role;
+            
+            modal.style.display = 'flex';
+        }
+
+        function closeCallModal() {
+            const modal = document.getElementById('callModal');
+            modal.style.display = 'none';
+        }
+
+        function initiateCall() {
+            // In a real implementation, this would initiate a phone call
+            // For this demo, we'll just show an alert and close the modal
+            alert('Initiating call to +1-734-796-7442... You are now being connected to a QuickBooks expert.');
+            closeCallModal();
+            
+            // In a real implementation, you might use:
+            // window.location.href = 'tel:+1-734-796-7442';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('callModal');
+            if (event.target === modal) {
+                closeCallModal();
+            }
+        }
     </script>
 </body>
 </html>
